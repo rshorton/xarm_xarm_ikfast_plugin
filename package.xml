@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package format="3">
+  <name>xarm_xarm_ikfast_plugin</name>
+  <version>0.0.0</version>
+  <description>IKFast plugin for xarm</description>
+  <license>BSD</license>
+  <maintainer email="scott@todo.todo">scott</maintainer>
+  
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <depend>moveit_core</depend>
+  <depend>class_loader</depend>
+  <depend>pluginlib</depend>
+  <depend>eigen</depend>
+  <depend>tf2</depend>
+  <depend>tf2_kdl</depend>
+  
+  <export>
+    <build_type>ament_cmake</build_type>
+    <moveit_core plugin="xarm_xarm_ikfast_plugin/xarm_xarm_moveit_ikfast_plugin_description.xml"/>
+  </export>
+</package>

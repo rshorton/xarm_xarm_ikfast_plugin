@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<library path="xarm_xarm_ikfast_plugin">
+  <class name="xarm_xarm/IKFastKinematicsPlugin" type="xarm_xarm::IKFastKinematicsPlugin" base_class_type="kinematics::KinematicsBase">
+    <description>IKFast61 plugin for closed-form kinematics of xarm xarm</description>
+  </class>
+</library>
