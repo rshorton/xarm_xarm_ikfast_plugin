@@ -418,7 +418,11 @@ bool IKFastKinematicsPlugin::initialize(const rclcpp::Node::SharedPtr& node,
   }
 
   storeValues(robot_model, group_name, base_frame, tip_frames, search_discretization);
-  if (!lookupParam(node, "link_prefix", link_prefix_, std::string("")))
+
+  node->declare_parameter("link_prefix", "");  
+  link_prefix_ = node->get_parameter("link_prefix").as_string();
+
+  if (link_prefix_.empty())
   {
     RCLCPP_INFO(LOGGER, "Using empty link_prefix.");
   }
